@@ -4,6 +4,7 @@ body {
 
 p {
   text-align: center;
+  font-size: 110%;
 }
 
 .img {
@@ -13,99 +14,99 @@ p {
 }
 
 .footer{
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    background-color: #2e2e2e;
-    padding: 20px 10px;
-    min-height: 40px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-color: #2e2e2e;
+  padding: 20px 10px;
+  min-height: 40px;
 }
 
 .footer a{
-    display: inline-block;
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    border-color: #9e1922;
+  display: inline-block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+  border-color: #9e1922;
 }
 
 .footer a:hover {
-    background-color: darkred;
-    color: black;
+  background-color: #781313;
+  color: black;
 }
 
 .footer a:active {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
 }
 
 .member {
-    text-align: center;
-    margin-bottom: 1.5cm;
+  text-align: center;
+  margin-bottom: 1.5cm;
 }
 
 .member p , .abt {
-    text-align: left;
-    text-indent: 5%;
+  text-align: left;
+  text-indent: 5%;
 }
 
 .anchor {
-    text-align: center;
+  text-align: center;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #2e2e2e;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2e2e2e;
 }
-  
+
 li {
-    float: left;
+  float: left;
 }
-  
+
 li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-  
+
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+  background-color: #781313;
 }
-  
+
 li.dropdown {
-    display: inline-block;
+  display: inline-block;
 }
-  
+
 .dropdown-cont {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
 .dropdown-cont a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
   
 .dropdown-cont a:hover {
   background-color: #eda1a1;
 }
-  
+
 .dropdown:hover .dropdown-cont {
-    display: block;
+  display: block;
 }
 
 .aboutlist {
@@ -130,20 +131,27 @@ li.dropdown {
   float: none;
 }
 
-.anchorsong {
-  background-color: red;
-  text-align: center;
-  margin-left: 45%;
-  margin-right: 45%;
+.songlist li p {
+  font-size: 150%;
 }
 
-.anchorsong:hover {
-  background-color: darkred;
+.anchorsong {
+  padding-bottom: 40px;
+}
+
+.anchorsong a{
+  background-color: #142b4a;
+  color: white;
+  text-align: center;
+}
+
+.anchorsong a:hover {
+  background-color: #4c74a8;
   color: white;
 }
 
 .collapsible {
-  background-color: #10801c;
+  background-color: #7ca3d6;
   cursor: pointer;
   border: none;
   text-align: left;
@@ -151,30 +159,37 @@ li.dropdown {
 }
 
 .collapsible:hover{
-  background-color: #094610;
+  background-color: #4c74a8;
+  color:white;
 }
 
 .songinfo {
   display: none;
   overflow: hidden;
+  font-size: 80%;
 }
 
+.songinfo a {
+  font-size: 150%;
+}
 
 /* Fonts:
+
 sans-serif
 'Times New Roman', Times, serif
 Arial, Helvetica, sans-serif
 Verdana, Tahoma, sans-serif
 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 Georgia, Times, 'Times New Roman', serif
+
 */
 
 h1, h2, h3, h4, h5, h6{
-  font-family: Times;
+  font-family: Verdana;
   text-align: center;
   color: #170e99;
 }
 
 .footer h2 {
-  color: lightblue;
+  color: #b8767e;
 }
