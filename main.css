@@ -116,7 +116,7 @@ li.dropdown {
 }
 
 .songlist {
-  list-style-type: none;
+  list-style-type: decimal;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -125,13 +125,23 @@ li.dropdown {
 }
 
 .songlist li {
-  color: #4d2929;
+  color: #4d2929; /* Text color */
   text-align: center;
   float: none;
 }
 
-.collapsible {
+.anchorsong {
   background-color: red;
+  text-align: center;
+}
+
+.anchorsong:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.collapsible {
+  background-color: #10801c;
   cursor: pointer;
   border: none;
   text-align: left;
@@ -139,7 +149,7 @@ li.dropdown {
 }
 
 .collapsible:hover{
-  background-color: darkred;
+  background-color: #094610;
 }
 
 .songinfo {
