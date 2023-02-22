@@ -133,6 +133,8 @@ li.dropdown {
 .anchorsong {
   background-color: red;
   text-align: center;
+  margin-left: 45%;
+  margin-right: 45%;
 }
 
 .anchorsong:hover {
