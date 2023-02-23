@@ -5,6 +5,8 @@ body {
 p {
   text-align: center;
   font-size: 110%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .img {
@@ -42,12 +44,7 @@ p {
   color: white;
 }
 
-.member {
-  text-align: center;
-  margin-bottom: 1.5cm;
-}
-
-.member p , .abt {
+.abt {
   text-align: left;
   text-indent: 5%;
 }
@@ -56,7 +53,19 @@ p {
   text-align: center;
 }
 
-ul {
+.anchor a:link, .anchor a:visited {
+  color: #510a0a;
+}
+
+.anchor a:hover {
+  color: #d51c29;
+}
+
+.anchor a:active {
+  color: #142b4a;
+}
+
+.header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -64,11 +73,11 @@ ul {
   background-color: #2e2e2e;
 }
 
-li {
+.header li {
   float: left;
 }
 
-li a, .dropbtn {
+.header li a, .dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -76,15 +85,15 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+.header li a:hover, .dropdown:hover .dropbtn {
   background-color: #781313;
 }
 
-li.dropdown {
+.header li.dropdown {
   display: inline-block;
 }
 
-.dropdown-cont {
+.header .dropdown-cont {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -93,7 +102,7 @@ li.dropdown {
   z-index: 1;
 }
 
-.dropdown-cont a {
+.header .dropdown-cont a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -101,11 +110,11 @@ li.dropdown {
   text-align: left;
 }
   
-.dropdown-cont a:hover {
+.header .dropdown-cont a:hover {
   background-color: #eda1a1;
 }
 
-.dropdown:hover .dropdown-cont {
+.header .dropdown:hover .dropdown-cont {
   display: block;
 }
 
@@ -126,7 +135,7 @@ li.dropdown {
 }
 
 .songlist li {
-  color: #4d2929; /* Text color */
+  color: black; /* Text color */
   text-align: center;
   float: none;
 }
@@ -143,6 +152,11 @@ li.dropdown {
   background-color: #142b4a;
   color: white;
   text-align: center;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .anchorsong a:hover {
@@ -173,6 +187,23 @@ li.dropdown {
   font-size: 150%;
 }
 
+.hbar {
+  margin: 0;
+  border: 0;
+  border-top: 8px solid #999999;
+  width: 100%;
+}
+
+.bandlist {
+  float: left;
+  width: 25%;
+}
+
+.projlist {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
 /* Fonts:
 
 sans-serif
