@@ -4,7 +4,7 @@ body {
 
 p {
   text-align: center;
-  font-size: 110%;
+  font-size: 120%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -51,6 +51,7 @@ p {
 
 .anchor {
   text-align: center;
+  font-size: 150%
 }
 
 .anchor a:link, .anchor a:visited {
