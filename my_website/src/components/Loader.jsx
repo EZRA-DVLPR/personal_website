@@ -1,10 +1,20 @@
+import React from 'react';
 
 const Loader = () => {
-  const circleCount = 7;
-  const radius = 8; // Adjust the radius as needed
-  const center = { x: 12, y: 12 }; // Center of the SVG
+  const circleCount = 7;//amount of figures
+  const radius = 8; //radius for shapes
+  const center = { x: 12, y: 12 }; //center of the SVG
+  const colorsList = [
+    'text-red-500',
+    'text-orange-500',
+    'text-yellow-500',
+    'text-green-500',
+    'text-blue-500',
+    'text-indigo-500',
+    'text-purple-500',
+  ] //added to save the colors from being purged by tailwindCSS
 
-  // Calculate the position of each circle around the center
+  //calculate the position of each circle around the center
   const getCirclePosition = (index) => {
     const angle = (index / circleCount) * Math.PI * 2;
     const x = center.x + radius * Math.cos(angle);
@@ -26,13 +36,15 @@ const Loader = () => {
       >
         {[...Array(circleCount)].map((_, index) => {
           const { x, y } = getCirclePosition(index);
+          console.log(index, colorsList[index])
+          const color = colorsList[index];
           return (
             <circle
               key={index}
               cx={x}
               cy={y}
-              r={5}
-              className={`text-${['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'][index]}-500 animate-grow`}
+              r={2}//radius of shape
+              className={`${colorsList[index]} animate-grow`}
               style={{ animationDelay: `${index * 0.1}s` }}
             />
           );
