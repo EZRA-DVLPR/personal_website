@@ -36,6 +36,8 @@ const Home = () => {
           </button>
         </div>
 
+
+        <a href='./testBlog.html'>Go to test blog</a>
         
     </div>
   )
