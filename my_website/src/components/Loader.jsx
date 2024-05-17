@@ -36,7 +36,7 @@ const Loader = () => {
       >
         {[...Array(circleCount)].map((_, index) => {
           const { x, y } = getCirclePosition(index);
-          console.log(index, colorsList[index])
+          //console.log(index, colorsList[index])
           const color = colorsList[index];
           return (
             <circle
