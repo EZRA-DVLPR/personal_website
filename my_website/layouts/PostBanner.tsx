@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import Image from '@/components/Image'
 import Bleed from 'pliny/ui/Bleed'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
+import type { Blog, Authors } from 'contentlayer/generated'
 import Comments from '@/components/Comments'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
@@ -11,16 +11,16 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 interface LayoutProps {
+  authorDetails: CoreContent<Authors>[]
   content: CoreContent<Blog>
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
 }
 
-export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
+export default function PostMinimal({ content, next, prev, authorDetails, children }: LayoutProps) {
   const { slug, title, images } = content
-  const displayImage =
-    images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
+  const displayImage = images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
 
   return (
     <SectionContainer>
@@ -38,6 +38,41 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
             <div className="relative pt-10">
               <PageTitle>{title}</PageTitle>
             </div>
+            <br></br>
+              <dd>
+                <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:space-x-0 xl:space-y-8">
+                  {authorDetails.map((author) => (
+                    <li className="flex items-center space-x-2" key={author.name}>
+                      {author.avatar && (
+                        <Image
+                          src={author.avatar}
+                          width={38}
+                          height={38}
+                          alt="avatar"
+                          className="h-10 w-10 rounded-full"
+                        />
+                      )}
+                      <dl className="whitespace-nowrap text-sm font-medium leading-5">
+                        <dt className="sr-only">Name</dt>
+                        <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
+                        <dt className="sr-only">Twitter</dt>
+                        <dd>
+                          {author.twitter && (
+                            <Link
+                              href={author.twitter}
+                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                            >
+                              {author.twitter
+                                .replace('https://twitter.com/', '@')
+                                .replace('https://x.com/', '@')}
+                            </Link>
+                          )}
+                        </dd>
+                      </dl>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
           </div>
           <div className="prose max-w-none py-4 dark:prose-invert">{children}</div>
           {siteMetadata.comments && (
@@ -68,6 +103,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
                     {next.title} &rarr;
                   </Link>
                 </div>
+                
               )}
             </div>
           </footer>

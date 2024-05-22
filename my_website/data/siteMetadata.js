@@ -28,8 +28,6 @@ const siteMetadata = {
     simpleAnalytics: {},
   },
   newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
     provider: 'buttondown',
   },
   comments: {
