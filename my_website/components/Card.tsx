@@ -1,7 +1,8 @@
 import Image from './Image'
 import Link from './Link'
+import ProjectStatus from './ProjectStatus'
 
-const Card = ({ title, description, imgSrc, href }) => (
+const Card = ({ title, description, status, imgSrc, href }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
       className={`${
@@ -38,6 +39,7 @@ const Card = ({ title, description, imgSrc, href }) => (
             title
           )}
         </h2>
+        <ProjectStatus projStatus={status}/>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
         {href && (
           <Link
