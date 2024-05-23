@@ -46,3 +46,6 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# blog post guide
+/data/blog/markdown-sample.mdx
