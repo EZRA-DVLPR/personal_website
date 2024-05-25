@@ -3,23 +3,47 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import Typewriter from '@/components/Typewriter'
+import Typewriter from '@/components/Main/Typewriter'
+import Image from '@/components/Image'
+import GHCalendar from '@/components/Main/GHCalendar'
+import Skills from '@/components/Main/Skills'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 3
 
 export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <Typewriter />
-        
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+          <div className='flex items-center justify-center'>
+            <Image
+                //change source to professional headshot of me
+                src={'/static/images/Ez-pfp-art.png'}
+                alt="Headshot"
+                width={192}
+                height={192}
+                className="h-48 w-48 rounded-full"
+              />
+          </div>
+          <Typewriter />                 
+          <h1 className='text-3xl font-bold'>Elevator Pitch</h1>
+          {/* Make sure to match this text to that of the About page === ./authors/default.mdx */}
+          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>My name is Isaiah Martinez, and I am a graduate student studying Computer Science at CSUN.
+            I obtained my B.S. in Computer Science and Mathematics in Spring 2023.
+            My interests include algorithm design and analysis, graph theory, combinatorics, and proofs.
+
+            I am a lifelong student.
+            There is always something new to learn, and I am happy to be a part of it.
+            I often construct new mini-projects and learn new skills beyond coding.
+            As such, I am very comfortable with trying new things and often seek to expand the limits of my understanding, even beyond my fields of interest.
+            This extends beyond my academic studies to my hobbies, personal relationships, and my view on life.
           </p>
+          <GHCalendar />
+          <Skills />
+          {/* `Latest Blog Posts` must always be the last thing in this div */}
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Latest Blog Posts
+          </h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
@@ -84,6 +108,9 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
+      <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            {siteMetadata.description}
+          </p>
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm title={'Subscribe to my newsletter!'}/>
