@@ -22,23 +22,29 @@ const Skills = () => {
             <br></br>
             <h1 className='text-3xl font-bold'>Skills</h1>
             <LineBar values={rangeValues} rangeArray={generateRange()} onChange={setRangeValues} />
-            <div className="flex flex-wrap justify-evenly gap-20 border-red-500 border-8">
+            <div className="flex flex-wrap justify-center gap-6 border border-red-400">
             {skillsData
             .filter((category) => category.skills.some((skill) => generateRange().includes(skill.proficiency)))
             .map((category) => (
-                <div key={category.category}>
-                    <h2 className="text-xl font-bold mb-2 underline">{category.category}</h2>
-                    <ul>
-                    {category.skills
-                        .filter((skill) => generateRange().includes(skill.proficiency))
-                        .map((skill) => (
-                        <li key={skill.name} className="mb-2">
-                            <a href={skill.href} target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                                {skill.name}
-                            </a>
-                        </li>
-                        ))}
-                    </ul>
+                <div key={category.category} className=''>
+                    <div className='rounded-lg bg-slate-800 inline-block w-80 min-h-24 pb-5'>
+    <div className='flex items-center justify-around'>
+        <category.icon className='m-4' />
+        <h2 className="text-xl font-bold underline m-4">{category.category}</h2>
+    </div>
+    <ul className='flex flex-wrap justify-center border-yellow-400'>
+        {category.skills
+            .filter((skill) => generateRange().includes(skill.proficiency))
+            .map((skill) => (
+                <li key={skill.name} className="mr-2 flex">
+                    <a href={skill.href} target="_blank" rel="noopener noreferrer" className="text-sky-500 bg-amber-900 rounded-full border-x-4 m-1 border-amber-900 hover:bg-amber-700 hover:border-amber-700">
+                        {skill.name}
+                    </a>
+                </li>
+            ))}
+    </ul>
+</div>
+
                 </div>
             ))}
             </div>
