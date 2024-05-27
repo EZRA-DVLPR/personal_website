@@ -13,7 +13,7 @@ const TypingEffect = () => {
         }}
       
         onInit={(typewriter) => {
-          typewriter.pasteString('> I\'m a ', null)
+          typewriter.pasteString('> I am a ', null)
             .typeString('Software Developer')
             .pauseFor(1500)
             .deleteChars(18)

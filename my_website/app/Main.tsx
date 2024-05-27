@@ -28,9 +28,10 @@ export default function Home({ posts }) {
           <Typewriter />                 
           <h1 className='text-3xl font-bold'>Elevator Pitch</h1>
           {/* Make sure to match this text to that of the About page === ./authors/default.mdx */}
-          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>My name is Isaiah Martinez, and I am a graduate student studying Computer Science at CSUN.
+          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
+            My name is Isaiah Martinez, and I am a graduate student studying Computer Science at CSUN.
             I obtained my B.S. in Computer Science and Mathematics in Spring 2023.
-            My interests include algorithm design and analysis, graph theory, combinatorics, and proofs.
+            My interests include algorithm design and analysis, graph theory, combinatorics, proofs, and research.
 
             I am a lifelong student.
             There is always something new to learn, and I am happy to be a part of it.
