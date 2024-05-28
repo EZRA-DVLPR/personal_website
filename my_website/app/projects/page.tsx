@@ -4,6 +4,11 @@ import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
+//add options to sort and view the projects based off of:
+// in prog
+// future
+// planned
+
 export default function Projects() {
   return (
     <>
