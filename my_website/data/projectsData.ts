@@ -6,11 +6,13 @@ interface Project {
   imgSrc?: string,                              //optional
 }
 
+// Showcase your projects with a hero image (16 x 9)
+
 const projectsData: Project[] = [
   // {
   //   title: 'Title text to display',
   //   description: `Text to display`,
-  //   status: 'Planned' | 'Completed' | 'In Progress',
+  //   status: 'Planned'
   //   imgSrc: '/static/images/IMG',
   //   href: '/blog/BLOGPAGENAME',
   // },
