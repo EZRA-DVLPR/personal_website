@@ -27,7 +27,7 @@ const ResumeSection = () => {
                 <a
                     href={'/static/profprofile/ResumeFile.pdf'}
                     download
-                    className="mt-4 p-2 bg-green-500 hover:bg-green-700 dark:bg-green-900 dark:hover:bg-green-700 text-white rounded-md "
+                    className="mt-4 p-2 text-white bg-comprimary-600 hover:bg-comprimary-800 dark:bg-comprimary-700 dark:hover:bg-comprimary-400 rounded-md "
                     onClick={handleDownload}
                 >
                     {downloaded ? <MdFileDownloadDone className='text-3xl' /> : <MdFileDownload className='text-3xl' />}

@@ -49,13 +49,13 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         ))}
       </div>
       <button 
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-zinc-200 bg-slate-500 hover:bg-slate-800 dark:bg-gray-800 dark:hover:bg-slate-600 px-4 py-2 -ml-20"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-comprimary-700 hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 px-4 py-2 -ml-20 rounded-md"
         onClick={handlePrev}
       >
         Prev
       </button>
       <button 
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-zinc-200 bg-slate-500 hover:bg-slate-800 dark:bg-gray-800 dark:hover:bg-slate-600 px-4 py-2 -mr-20"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-comprimary-700 hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 px-4 py-2 -mr-20 rounded-md"
         onClick={handleNext}
       >
         Next
@@ -65,7 +65,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={handleClose}>
           <div className="relative bg-slate-200 dark:bg-slate-700 p-4 w-3/4 max-w-2xl mx-auto" onClick={(e) => e.stopPropagation()}>
             <button 
-              className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-md"
+              className="absolute top-2 left-2 bg-primary-500 text-white px-2 py-1 rounded-md"
               onClick={handleClose}
             >
               X

@@ -39,9 +39,9 @@ const SlideshowGallery: React.FC<SlideshowGalleryProps> = ({ images }) => {
   return (
     <div className="relative w-full max-w-xl mx-auto mb-20">
       <img src={images[currentIndex]} alt={`Certification ${currentIndex + 1}`} className="w-full h-auto" />
-      <button onClick={prevImage} className="absolute left-0 top-1/2 transform -translate-y-1/2 text-zinc-200 bg-slate-500 hover:bg-slate-800 dark:bg-gray-800 dark:hover:bg-slate-600 p-2 -ml-20">Prev</button>
-      <button onClick={nextImage} className="absolute right-0 top-1/2 transform -translate-y-1/2 text-zinc-200 bg-slate-500 hover:bg-slate-800 dark:bg-gray-800 dark:hover:bg-slate-600 p-2 -mr-20">Next</button>
-      <p className='absolute bottom-0 left-1/2 transform -translate-x-1/2 text-zinc-200 bg-slate-500 dark:bg-gray-800 p-2 -mb-14'>{currentIndex + 1 + '/' + images.length}</p>
+      <button onClick={prevImage} className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-comprimary-700 hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 p-2 -ml-20 rounded-md">Prev</button>
+      <button onClick={nextImage} className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-comprimary-700 hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 p-2 -mr-20 rounded-md">Next</button>
+      <p className='absolute bottom-0 left-1/2 transform -translate-x-1/2 text-zinc-200 bg-slate-500 dark:bg-gray-800 p-2 -mb-14 rounded-md'>{currentIndex + 1 + '/' + images.length}</p>
       {currentIndex === 10 ? 
         <div className='mt-2'>
           <a href='https://www.youtube.com/watch?v=rIrNIzy6U_g'>Click here to watch the video</a> 

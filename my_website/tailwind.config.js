@@ -27,6 +27,20 @@ module.exports = {
       colors: {
         primary: colors.pink,
         gray: colors.gray,
+        //complement to primary color
+        comprimary: {
+          '50' : '#f2fdf7',
+          '100' : '#e7fcf0',
+          '200' : '#cffbe2',
+          '300' : '#a8f9cc',
+          '400' : '#72f4b1',
+          '500' : '#48ec9a',
+          '600' : '#27db8a',
+          '700' : '#18be79',
+          '800' : '#179d67',
+          '900' : '#188358',
+          '950' : '#075033',
+        }
       },
       typography: ({ theme }) => ({
         DEFAULT: {

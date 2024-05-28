@@ -20,7 +20,7 @@ const LineBar: React.FC<LineBarProps> = ({ values, rangeArray, onChange }) => {
         <p className="text-2xl mb-2">Proficiency</p>
         <ReactSlider
           className="w-1/2 h-2 bg-gray-300 rounded-lg"
-          thumbClassName="w-6 h-6 bg-blue-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 -mt-2 flex items-center justify-center"
+          thumbClassName="w-6 h-6 bg-comprimary-700 rounded-full focus:outline-none focus:ring-2 focus:ring-comprimary-500 -mt-2 flex items-center justify-center"
           thumbActiveClassName="w-6 h-6 bg-yellow-500 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-300 -mt-2 flex items-center justify-center"
           value={values}
           onChange={handleSliderChange}
@@ -40,7 +40,7 @@ const LineBar: React.FC<LineBarProps> = ({ values, rangeArray, onChange }) => {
                 key={key}
                 {...restProps}
                 className={`h-2 rounded-lg ${
-                  isBetween ? 'bg-purple-500' : 'bg-gray-300'
+                  isBetween ? 'bg-primary-500' : 'bg-primary-200'
                 }`}
               />
             );
