@@ -27,7 +27,7 @@ const Skills = () => {
                     .filter((category) => category.skills.some((skill) => generateRange().includes(skill.proficiency)))
                     .map((category) => (
                         <div key={category.category}>
-                            <div className='rounded-lg bg-sky-200 dark:bg-slate-800 inline-block w-80 min-h-24 pb-5'>
+                            <div className='rounded-lg bg-slate-200 dark:bg-slate-800 inline-block w-80 min-h-24 pb-5'>
                                 <div className='flex items-center justify-around'>
                                     <category.icon className='m-4 text-2xl' />
                                     <h2 className="text-xl font-bold underline m-4">{category.category}</h2>
@@ -39,11 +39,11 @@ const Skills = () => {
                                             <li key={skill.name} className="mr-2 flex">
                                                 <a href={skill.href} target="_blank" rel="noopener noreferrer"
                                                     className="rounded-full border-x-4 m-1 
-                                            text-amber-600 dark:text-sky-300 
-                                            bg-amber-200 dark:bg-amber-700 
-                                            border-amber-200 dark:border-amber-700 
-                                            hover:bg-amber-50 dark:hover:bg-amber-900 
-                                            hover:border-amber-50 dark:hover:border-amber-900">
+                                            text-sky-600 dark:text-sky-300 
+                                            bg-amber-300 dark:bg-amber-900 
+                                            border-amber-300 dark:border-amber-900 
+                                            hover:bg-yellow-500 dark:hover:bg-amber-700 
+                                            hover:border-yellow-500 dark:hover:border-amber-700">
                                                     {skill.name}
                                                 </a>
                                             </li>
