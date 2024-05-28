@@ -29,7 +29,7 @@ const Skills = () => {
                         <div key={category.category}>
                             <div className='rounded-lg bg-sky-200 dark:bg-slate-800 inline-block w-80 min-h-24 pb-5'>
                                 <div className='flex items-center justify-around'>
-                                    <category.icon className='m-4' />
+                                    <category.icon className='m-4 text-2xl' />
                                     <h2 className="text-xl font-bold underline m-4">{category.category}</h2>
                                 </div>
                                 <ul className='flex flex-wrap justify-center border-yellow-400'>

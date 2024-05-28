@@ -1,4 +1,10 @@
-import { FaPython } from 'react-icons/fa';
+import { FaCode, FaDatabase, FaGamepad, FaChartBar, FaSpider, FaTools, FaDocker, FaWifi, FaWindows } from 'react-icons/fa';
+import { AiFillCode } from 'react-icons/ai';
+import { LuBrainCircuit } from 'react-icons/lu';
+import { FaMagnifyingGlassChart, FaLaptopCode, FaPhotoFilm, FaGears } from 'react-icons/fa6';
+import { VscVscode } from "react-icons/vsc";
+import { SiLibreoffice } from "react-icons/si";
+import { TbApi } from 'react-icons/tb';
 
 import { IconType } from 'react-icons';
 
@@ -17,7 +23,7 @@ interface SkillCategory {
 const skillsData: SkillCategory[] = [
     {
         category: 'Programming Languages',
-        icon: FaPython,
+        icon: AiFillCode,
         skills: [
             {
                 name: 'Python',
@@ -78,7 +84,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Markup & Styling Languages',
-        icon: FaPython,
+        icon: FaCode,
         skills: [
             {
                 name: 'HTML',
@@ -105,7 +111,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Machine Learning',
-        icon: FaPython,
+        icon: LuBrainCircuit,
         skills: [
             {
                 name: 'Scikit-learn',
@@ -141,7 +147,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Data Science',
-        icon: FaPython,
+        icon: FaMagnifyingGlassChart,
         skills: [
             {
                 name: 'Tidyverse',
@@ -162,7 +168,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Game Development',
-        icon: FaPython,
+        icon: FaGamepad,
         skills: [
             {
                 name: 'Unreal Engine 5',
@@ -178,7 +184,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Database',
-        icon: FaPython,
+        icon: FaDatabase,
         skills: [
             {
                 name: 'MongoDB',
@@ -194,7 +200,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Web Development',
-        icon: FaPython,
+        icon: FaLaptopCode,
         skills: [
             {
                 name: 'React',
@@ -225,7 +231,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Data Analysis',
-        icon: FaPython,
+        icon: FaChartBar,
         skills: [
             {
                 name: 'Pandas',
@@ -256,7 +262,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Web Scraping',
-        icon: FaPython,
+        icon: FaSpider,
         skills: [
             {
                 name: 'Rvest',
@@ -277,7 +283,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Code Editor & IDEs',
-        icon: FaPython,
+        icon: VscVscode,
         skills: [
             {
                 name: 'VS Code',
@@ -318,7 +324,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Developer Tools',
-        icon: FaPython,
+        icon: FaTools,
         skills: [
             {
                 name: 'Git',
@@ -364,7 +370,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Office Suites',
-        icon: FaPython,
+        icon: SiLibreoffice,
         skills: [
             {
                 name: 'Microsoft Suite',
@@ -415,7 +421,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Media Creation & Editing',
-        icon: FaPython,
+        icon: FaPhotoFilm,
         skills: [
             {
                 name: 'GIMP',
@@ -461,7 +467,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Scripting & Automation',
-        icon: FaPython,
+        icon: FaGears,
         skills: [
             {
                 name: 'ArgParse',
@@ -482,7 +488,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'DevOps',
-        icon: FaPython,
+        icon: FaDocker,
         skills: [
             {
                 name: 'Docker',
@@ -498,7 +504,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Network Tools',
-        icon: FaPython,
+        icon: FaWifi,
         skills: [
             {
                 name: 'WireShark',
@@ -509,7 +515,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'Operating Systems',
-        icon: FaPython,
+        icon: FaWindows,
         skills: [
             {
                 name: 'Windows 11',
@@ -545,7 +551,7 @@ const skillsData: SkillCategory[] = [
     },
     {
         category: 'API',
-        icon: FaPython,
+        icon: TbApi,
         skills: [
             {
                 name: 'TomTom',
