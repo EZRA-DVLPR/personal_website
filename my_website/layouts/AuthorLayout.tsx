@@ -10,6 +10,7 @@ interface Props {
 }
 
 const images = [
+  //{ src: '/static/about/.jpg', title: 'title', description: 'description', date: '2023-05-01' },
   { src: '/static/about/ecuselfie.jpg', title: 'Selfie with ECU Pirate', description: 'During my trip in North Carolina to do research, I went on a Walmart run with my roommate and we saw this pirate guy outside the store. I don\'t normally take selfies unless they\'re funny.', date: '2023-05-02' },
   { src: '/static/about/labhelper.jpg', title: 'ECU Research Helper', description: 'In one of the neighboring labs, I was asked to help calibrate and set up the machine\'s wiring. It was fun to help the other people on their project.', date: '2023-05-03' },
   { src: '/static/about/senseibenny.jpg', title: 'Sensei Benny and I', description: 'After an award ceremony for Sensei Benny `The Jet` I asked for a photo and he obliged. He\'s an awesome guy and a true teacher. A true craftsman who knows a lot about his craft. It\'s an honor to be able to train with him.', date: '2023-05-03' },
@@ -18,6 +19,7 @@ const images = [
   { src: '/static/about/honeyfrontover.jpg', title: 'Honey over the printer', description: 'This is one of my cats. Her name is Honey and she is adorable, chunky, and funny.', date: '2023-05-03' },
   { src: '/static/about/honeywithguitar.jpg', title: 'Honey with the guitars', description: 'Here is Honey sitting with my instruments. It\'s rare to get a photo of her looking at the camera.', date: '2023-05-03' },
   { src: '/static/about/blackbeltcard.jpg', title: '2nd Dan ID Card', description: 'This ID card is given to those who practice Tae Kwon Do and achieve the rank of 2nd Dan (2nd Degree Black Belt). This is certified from the Kukkiwon, an organization based in South Korea dedicated to overseeing the official matters of Tae Kwon Do.', date: '2023-05-01' },
+  { src: '/static/about/palico.jpg', title: 'Palico in Monster Hunter Rise', description: 'A series of Video Games that I enjoy is Monster Hunter. Here is a photo of my Palico Partner for hunting.', date: '2023-05-01' },
 ];
 
 export default function AuthorLayout({ children, content }: Props) {
