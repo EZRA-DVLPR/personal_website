@@ -1,4 +1,3 @@
-// Define the getStatusClass function outside the component
 const getStatusClass = (projStatus) => {
   switch (projStatus) {
     case 'Planned':
@@ -12,7 +11,6 @@ const getStatusClass = (projStatus) => {
   }
 };
 
-// Define the ProjectStatus component
 const ProjectStatus = ({ projStatus }) => {
   return (
     <p className={`prose mb-3 max-w-none ${getStatusClass(projStatus)}`}>
