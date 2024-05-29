@@ -31,10 +31,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <>
-    <div className='flex flex-col items-center'>
-        <h1 className="text-6xl font-bold text-center mb-8 mt-4">Image Gallery</h1>
-        <p className='text-lg'>Click on an Image for more Information!</p>
-    </div>
     <div className="relative w-full max-w-4xl mx-auto">
       <div className="flex overflow-hidden">
         {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
@@ -42,7 +38,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             <img 
               src={image.src} 
               alt={`Image ${index + 1}`} 
-              className="w-full h-auto cursor-pointer" 
+              className="w-full max-h-[300px] object-contain cursor-pointer" 
               onClick={() => handleExpand(image)} 
             />
           </div>
