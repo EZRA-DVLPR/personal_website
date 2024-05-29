@@ -50,7 +50,7 @@ const images = [
     src: '/static/art/abstractVW.jpg',
     title: 'Abstract piece with Victor Wooten',
     description:
-      'On a separate assignment for the art class I took, we were instructed to take an image of a famous person and create an abstract image with them and other objects given to us. I chose to use Victor Wooten because he is an incredible bass player and one who I look up to when playing the bass. I sought to challenge myself and use intentionally weirdly shaped objects to enhance my study and analysis of object shapes and colors.',
+      'For an assignment for the art class I took, we were instructed to take an image of a famous person and create abstract art with them alongisde other objects given to us. I chose to use Victor Wooten because he is an incredible bass player and one who I look up to as a bass player. I sought to challenge myself and intentionally used oddly shaped objects for a bigger challenge.',
     date: '2023-05-02',
   },
   {
@@ -77,7 +77,7 @@ const images = [
     src: '/static/art/abstract.jpg',
     title: 'Abstract',
     description:
-      'This piece was one of the final parts of the art class where we learned about and created abstract art. This is one of two pieces created is intentionally very busy visually. It is supposed to be completely different than the other piece. It has lots of interesting designs layered over each other.',
+      'This piece was one of the final parts of the art class where we learned about abstract art. This is one of two pieces created is intentionally very busy visually. It is supposed to be completely different than the other piece. It has lots of interesting designs layered over each other.',
     date: '2023-05-02',
   },
   {

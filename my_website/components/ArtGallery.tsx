@@ -45,7 +45,7 @@ const ArtGallery: React.FC<GalleryProps> = ({ images }) => {
               X
             </button>
             <div className="flex justify-center items-center max-h-[75vh]">
-              <img src={expandedImage.src} alt="Expanded" className="max-w-full max-h-[75vh] mb-4"/>
+              <img src={expandedImage.src} alt="Expanded" className="max-w-full max-h-[70vh] mb-4"/>
             </div>
             <div className='flex justify-between mb-4'>
               <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200">{expandedImage.title}</h2>

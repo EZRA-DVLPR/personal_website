@@ -2,8 +2,8 @@
 const siteMetadata = {
   title: 'EZRA\'s Personal Website',
   author: 'EZRA-DVLPR',
-  headerTitle: 'Personal Website',
-  description: 'A website created with Next.js and Tailwind.css',
+  headerTitle: 'Portfolio',
+  description: 'A portfolio website created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://ezra-dvlpr.github.io/personal_website/',
