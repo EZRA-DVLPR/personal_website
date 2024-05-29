@@ -20,6 +20,8 @@ const images = [
   { src: '/static/about/honeywithguitar.jpg', title: 'Honey with the guitars', description: 'Here is Honey sitting with my instruments. It\'s rare to get a photo of her looking at the camera.', date: '2023-05-03' },
   { src: '/static/about/blackbeltcard.jpg', title: '2nd Dan ID Card', description: 'This ID card is given to those who practice Tae Kwon Do and achieve the rank of 2nd Dan (2nd Degree Black Belt). This is certified from the Kukkiwon, an organization based in South Korea dedicated to overseeing the official matters of Tae Kwon Do.', date: '2023-05-01' },
   { src: '/static/about/palico.jpg', title: 'Palico in Monster Hunter Rise', description: 'A series of Video Games that I enjoy is Monster Hunter. Here is a photo of my Palico Partner for hunting.', date: '2023-05-01' },
+//add images of instruments
+
 ];
 
 export default function AuthorLayout({ children, content }: Props) {
