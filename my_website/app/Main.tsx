@@ -17,9 +17,9 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <div className='flex items-center justify-center'>
-            <Image
+              <Image
                 //change source to professional headshot of me
-                src={'/static/images/Ez-pfp-art.png'}
+                src={'/static/images/Ez_pfp_art.png'}
                 alt="Headshot"
                 width={192}
                 height={192}
