@@ -40,11 +40,26 @@ const MusicLayout = ({ children }) => {
               ref={songRefs[song.rank]} // Attach ref to the element with the respective rank
             >
               <div
-                className="mb-4 rounded bg-slate-100 p-4 dark:bg-slate-700"
+                className="mb-4 rounded bg-slate-200 p-4 dark:bg-slate-700"
                 style={{ width: '60%' }}
               >
                 <div className="flex justify-between">
-                  <h2 className="font-bold sm:text-xl md:text-3xl">{song.rank}.</h2>
+                  <h2
+                    className={`font-bold ${
+                      song.rank === 1
+                        ? 'text-3xl md:text-5xl lg:text-7xl'
+                        : song.rank === 2
+                          ? 'text-2xl sm:text-4xl md:text-6xl'
+                          : song.rank === 3
+                            ? 'text-xl sm:text-3xl md:text-5xl'
+                            : song.rank === 4
+                              ? 'text-2xl md:text-4xl'
+                              : 'text-xl md:text-3xl'
+                    }`}
+                  >
+                    {song.rank}.
+                  </h2>
+
                   <h2 className="font-bold sm:text-xl md:text-3xl"> {song.name}</h2>
                 </div>
                 <p className="md:text-2xl">Artist: {song.artist}</p>

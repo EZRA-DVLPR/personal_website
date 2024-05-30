@@ -40,7 +40,12 @@ module.exports = {
           '800' : '#179d67',
           '900' : '#188358',
           '950' : '#075033',
+        },
+        iconMatch: {
+         'light' : '#0ba0b7',
+         'dark' : '#3CD2E9',
         }
+
       },
       typography: ({ theme }) => ({
         DEFAULT: {
