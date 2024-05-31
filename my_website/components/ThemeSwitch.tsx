@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { Fragment, useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { Menu, RadioGroup, Transition } from '@headlessui/react';
+import { Fragment, useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
+import { Menu, RadioGroup, Transition } from '@headlessui/react'
 
 const Sun = () => (
   <svg
@@ -17,7 +17,7 @@ const Sun = () => (
       clipRule="evenodd"
     />
   </svg>
-);
+)
 
 const Moon = () => (
   <svg
@@ -28,7 +28,7 @@ const Moon = () => (
   >
     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
   </svg>
-);
+)
 
 const Monitor = () => (
   <svg
@@ -45,25 +45,23 @@ const Monitor = () => (
     <line x1="7" y1="17" x2="13" y2="17"></line>
     <line x1="10" y1="13" x2="10" y2="17"></line>
   </svg>
-);
+)
 
 const ThemeSwitch: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  if (!mounted) return null; // Ensure nothing is rendered until mounted
+  if (!mounted) return null // Ensure nothing is rendered until mounted
 
   return (
     <div className="mr-5">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button>
-            {resolvedTheme === 'dark' ? <Moon /> : <Sun />}
-          </Menu.Button>
+          <Menu.Button>{resolvedTheme === 'dark' ? <Moon /> : <Sun />}</Menu.Button>
         </div>
         <Transition
           as={Fragment}
@@ -131,7 +129,7 @@ const ThemeSwitch: React.FC = () => {
         </Transition>
       </Menu>
     </div>
-  );
-};
+  )
+}
 
-export default ThemeSwitch;
+export default ThemeSwitch

@@ -178,7 +178,7 @@ Here is a simple footnote[^1]. With some additional text after it.
 
 [^1]: My reference.
 
-```
+````
 
 ## add to footer
 
@@ -186,7 +186,7 @@ Here is a simple footnote[^1]. With some additional text after it.
 [^1]: The previous version injects Preact into the production build. However, this is no longer possible as it does not support React Server Components. While overall bundle size has increased to about 85kB, most of the content can be pre-rendered on the server side, resulting in a low first contentful paint and time to interactive. Using React throughtout also leads to more consistent behavior with external libraries and components.
 [^2]: This is different from Next.js App Directory layouts and are best thought of as reusable React containers.
 [^3]: This takes advantage of Server Components by making it simple to specify the layout of choice in the markdown file and match against the `layouts` object which is then used to render the appropriate layout component.
-```
+````
 
 ## Bibliography and Citations (v1.2.1)
 
@@ -279,7 +279,6 @@ analytics: {
 },
 ```
 
-
 ````
 ```js {1, 3-4} showLineNumbers
 var num1, num2, sum
@@ -292,7 +291,7 @@ alert('Sum = ' + sum) // "+" means combine into a string
 
 will appear as:
 
-```js {1,3-4} showLineNumbers
+````js {1,3-4} showLineNumbers
 var num1, num2, sum
 num1 = prompt('Enter first number')
 num2 = prompt('Enter second number')
@@ -310,7 +309,7 @@ def fib():
 
 for index, fibonacci_number in zip(range(10), fib()):
      print('{i:3}: {f:3}'.format(i=index, f=fibonacci_number))
-```
+````
 
 ### LaTeX
 
@@ -442,7 +441,7 @@ $$
 
 # Gallery
 
-Gallery of images: 
+Gallery of images:
 
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
   <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
@@ -467,8 +466,6 @@ Gallery of images:
     type="video/webm"
   />
 </video>
-
-
 
 # Nested Routes
 

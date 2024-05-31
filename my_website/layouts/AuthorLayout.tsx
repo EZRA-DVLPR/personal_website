@@ -10,7 +10,13 @@ interface Props {
 }
 
 const images = [
-  //{ src: '/static/about/.jpg', title: 'title', description: 'description', date: '2023-05-01' },
+  // {
+  //   src: '/static/about/.jpg',
+  //   title: 'title',
+  //   description:
+  //     'description',
+  //   date: '2023-05-01'
+  // },
   {
     src: '/static/about/ecuselfie.jpg',
     title: 'Selfie with ECU Pirate',
@@ -135,7 +141,13 @@ export default function AuthorLayout({ children, content }: Props) {
             About Me
           </h1>
           <div className="flex content-center justify-center">
-            <img src={'/static/about/profshot.jpg'} className="h-auto w-[55%]" />
+            <Image
+              src={'/static/about/profshot.jpg'}
+              className="h-auto w-[55%]"
+              alt={'Professional Headshot of me'}
+              width={800}
+              height={600}
+            />
           </div>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">

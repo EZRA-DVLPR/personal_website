@@ -1,62 +1,101 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
+import { useState } from 'react'
+import Image from 'next/image'
 
 type GalleryProps = {
-  images: { src: string, title: string, description: string, date: string }[];
-};
+  images: { src: string; title: string; description: string; date: string }[]
+}
 
 const ArtGallery: React.FC<GalleryProps> = ({ images }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [expandedImage, setExpandedImage] = useState<{ src: string, title: string, description: string, date: string } | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [expandedImage, setExpandedImage] = useState<{
+    src: string
+    title: string
+    description: string
+    date: string
+  } | null>(null)
 
-  const handleExpand = (image: { src: string, title: string, description: string, date: string }) => {
-    setExpandedImage(image);
-    setIsExpanded(true);
-  };
+  const handleExpand = (image: {
+    src: string
+    title: string
+    description: string
+    date: string
+  }) => {
+    setExpandedImage(image)
+    setIsExpanded(true)
+  }
 
   const handleClose = () => {
-    setIsExpanded(false);
-    setExpandedImage(null);
-  };
+    setIsExpanded(false)
+    setExpandedImage(null)
+  }
 
   return (
     <>
       <div className="flex flex-wrap justify-center gap-4">
         {images.map((image, index) => (
-          <div key={index} className="w-[45%]">
-            <img 
-              src={image.src} 
-              alt={`Image ${index + 1}`} 
-              className="w-full h-auto cursor-pointer" 
-              onClick={() => handleExpand(image)} 
+          <button
+            key={index}
+            className="w-[45%] cursor-pointer"
+            onClick={() => handleExpand(image)}
+          >
+            <Image
+              src={image.src}
+              alt={`${image.title}`}
+              className="h-auto w-full"
+              width={500}
+              height={300}
+              layout="responsive"
+              objectFit="cover"
             />
-          </div>
+          </button>
         ))}
       </div>
 
       {isExpanded && expandedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={handleClose}>
-          <div className="relative bg-slate-200 dark:bg-slate-700 p-4 w-3/4 max-w-2xl mx-auto" onClick={(e) => e.stopPropagation()}>
-            <button 
-              className="absolute top-2 left-2 bg-primary-500 text-white px-2 py-1 rounded-md"
+        <button
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          onClick={handleClose}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              handleClose()
+            }
+          }}
+          tabIndex={0}
+        >
+          <button
+            className="relative mx-auto w-3/4 max-w-2xl bg-slate-200 p-4 dark:bg-slate-700"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute left-2 top-2 rounded-md bg-primary-500 px-2 py-1 text-white"
               onClick={handleClose}
             >
               X
             </button>
-            <div className="flex justify-center items-center max-h-[75vh]">
-              <img src={expandedImage.src} alt="Expanded" className="max-w-full max-h-[70vh] mb-4"/>
+            <div className="flex max-h-[75vh] items-center justify-center">
+              <Image
+                src={expandedImage.src}
+                alt="Expanded"
+                className="mb-4 h-full max-h-[70vh] w-auto max-w-full"
+                width={400}
+                height={1000}
+                layout="intrinsic"
+              />
             </div>
-            <div className='flex justify-between mb-4'>
-              <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200">{expandedImage.title}</h2>
+            <div className="mb-4 flex justify-between">
+              <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200">
+                {expandedImage.title}
+              </h2>
               <p className="text-slate-700 dark:text-slate-200">{expandedImage.date}</p>
             </div>
-            <p className='text-slate-700 dark:text-slate-200'>{expandedImage.description}</p>
-          </div>
-        </div>
+            <p className="text-slate-700 dark:text-slate-200">{expandedImage.description}</p>
+          </button>
+        </button>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ArtGallery;
+export default ArtGallery

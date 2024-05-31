@@ -29,23 +29,22 @@ module.exports = {
         gray: colors.gray,
         //complement to primary color
         comprimary: {
-          '50' : '#f2fdf7',
-          '100' : '#e7fcf0',
-          '200' : '#cffbe2',
-          '300' : '#a8f9cc',
-          '400' : '#72f4b1',
-          '500' : '#48ec9a',
-          '600' : '#27db8a',
-          '700' : '#18be79',
-          '800' : '#179d67',
-          '900' : '#188358',
-          '950' : '#075033',
+          50: '#f2fdf7',
+          100: '#e7fcf0',
+          200: '#cffbe2',
+          300: '#a8f9cc',
+          400: '#72f4b1',
+          500: '#48ec9a',
+          600: '#27db8a',
+          700: '#18be79',
+          800: '#179d67',
+          900: '#188358',
+          950: '#075033',
         },
         iconMatch: {
-         'light' : '#0ba0b7',
-         'dark' : '#3CD2E9',
-        }
-
+          light: '#0ba0b7',
+          dark: '#3CD2E9',
+        },
       },
       typography: ({ theme }) => ({
         DEFAULT: {

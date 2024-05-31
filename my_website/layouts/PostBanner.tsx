@@ -28,7 +28,7 @@ interface LayoutProps {
 
 export default function PostMinimal({ content, next, prev, authorDetails, children }: LayoutProps) {
   const { slug, title, images, date, tags } = content
-  
+
   //find a better image suited for a default display
   const displayImage = images && images.length > 0 ? images[0] : '/static/images/github-traffic.png'
 
@@ -36,29 +36,29 @@ export default function PostMinimal({ content, next, prev, authorDetails, childr
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
-      <div>
-        <div className="flex justify-between items-center pt-10">
-          <div>
-            <PageTitle>{title}</PageTitle>
+        <div>
+          <div className="flex items-center justify-between pt-10">
+            <div>
+              <PageTitle>{title}</PageTitle>
+            </div>
+            <div>
+              <dt className="sr-only">Published on</dt>
+              <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                <time dateTime={date}>
+                  {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                </time>
+              </dd>
+            </div>
           </div>
-          <div>
-            <dt className="sr-only">Published on</dt>
-            <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-              <time dateTime={date}> 
-                {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-              </time>
-            </dd>
-          </div>
-        </div>
-        <div className="space-y-1 pb-10 text-center dark:border-gray-700">
-          <div className="w-full">
-            <Bleed>
-              <div className="relative aspect-[2/1] w-full">
-                <Image src={displayImage} alt={title} fill className="object-cover" />
-              </div>
-            </Bleed>
-          </div>
-          <br></br>
+          <div className="space-y-1 pb-10 text-center dark:border-gray-700">
+            <div className="w-full">
+              <Bleed>
+                <div className="relative aspect-[2/1] w-full">
+                  <Image src={displayImage} alt={title} fill className="object-cover" />
+                </div>
+              </Bleed>
+            </div>
+            <br></br>
             <dd>
               <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:space-x-0 xl:space-y-8">
                 {authorDetails.map((author) => (
@@ -93,19 +93,19 @@ export default function PostMinimal({ content, next, prev, authorDetails, childr
                 ))}
               </ul>
             </dd>
-        </div>
+          </div>
           {tags && (
-                  <div className="py-4 xl:py-8">
-                    <h2 className="text-xl uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Tags
-                    </h2>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                  </div>
-                )}
+            <div className="py-4 xl:py-8">
+              <h2 className="text-xl uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                Tags
+              </h2>
+              <div className="flex flex-wrap">
+                {tags.map((tag) => (
+                  <Tag key={tag} text={tag} />
+                ))}
+              </div>
+            </div>
+          )}
           <div className="prose max-w-none py-4 dark:prose-invert">{children}</div>
           {siteMetadata.comments && (
             <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">

@@ -9,36 +9,35 @@ import GHCalendar from '@/components/Main/GHCalendar'
 import Skills from '@/components/Main/Skills'
 import ProfProfile from '@/components/Main/ProfProfile'
 
-const MAX_DISPLAY = 3;
+const MAX_DISPLAY = 3
 
 export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <div className='flex items-center justify-center'>
-              <Image
-                //change source to professional headshot of me
-                src={'/static/images/Ez_pfp_art.png'}
-                alt="Headshot"
-                width={192}
-                height={192}
-                className="h-48 w-48 rounded-full"
-              />
+          <div className="flex items-center justify-center">
+            <Image
+              //change source to professional headshot of me
+              src={'/static/images/Ez_pfp_art.png'}
+              alt="Headshot"
+              width={192}
+              height={192}
+              className="h-48 w-48 rounded-full"
+            />
           </div>
-          <Typewriter />                 
-          <h1 className='text-3xl font-bold'>Elevator Pitch</h1>
+          <Typewriter />
+          <h1 className="text-3xl font-bold">Elevator Pitch</h1>
           {/* Make sure to match this text to that of the About page === ./authors/default.mdx */}
-          <p className='text-lg leading-7 text-gray-500 dark:text-gray-400'>
-            My name is Isaiah Martinez, and I am a graduate student studying Computer Science at CSUN.
-            I obtained my B.S. in Computer Science and Mathematics in Spring 2023.
-            My interests include algorithm design and analysis, graph theory, combinatorics, proofs, and research.
-
-            I am a lifelong student.
-            There is always something new to learn, and I am happy to be a part of it.
-            I often construct new mini-projects and learn new skills beyond coding.
-            As such, I am very comfortable with trying new things and often seek to expand the limits of my understanding, even beyond my fields of interest.
-            This extends beyond my academic studies to my hobbies, personal relationships, and my view on life.
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            My name is Isaiah Martinez, and I am a graduate student studying Computer Science at
+            CSUN. I obtained my B.S. in Computer Science and Mathematics in Spring 2023. My
+            interests include algorithm design and analysis, graph theory, combinatorics, proofs,
+            and research. I am a lifelong student. There is always something new to learn, and I am
+            happy to be a part of it. I often construct new mini-projects and learn new skills
+            beyond coding. As such, I am very comfortable with trying new things and often seek to
+            expand the limits of my understanding, even beyond my fields of interest. This extends
+            beyond my academic studies to my hobbies, personal relationships, and my view on life.
           </p>
           <GHCalendar />
           <Skills />
@@ -112,11 +111,11 @@ export default function Home({ posts }) {
         </div>
       )}
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+        {siteMetadata.description}
+      </p>
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
-          <NewsletterForm title={'Subscribe to my newsletter!'}/>
+          <NewsletterForm title={'Subscribe to my newsletter!'} />
         </div>
       )}
     </>

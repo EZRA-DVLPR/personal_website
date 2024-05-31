@@ -7,12 +7,12 @@ import { useState } from 'react'
 const filterOptions = ['All', 'In Progress', 'Completed', 'Planned']
 
 const Project = () => {
-
   const [selectedFilter, setSelectedFilter] = useState('All')
 
-  const filteredProjects = selectedFilter === 'All' 
-    ? projectsData 
-    : projectsData.filter((project) => project.status === selectedFilter)
+  const filteredProjects =
+    selectedFilter === 'All'
+      ? projectsData
+      : projectsData.filter((project) => project.status === selectedFilter)
 
   return (
     <>
@@ -28,10 +28,10 @@ const Project = () => {
             {filterOptions.map((option) => (
               <button
                 key={option}
-                className={`px-4 py-2 rounded-lg ${
+                className={`rounded-lg px-4 py-2 ${
                   selectedFilter === option
-                    ? 'bg-primary-600 dark:bg-primary-500 text-white'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                    ? 'bg-primary-600 text-white dark:bg-primary-500'
+                    : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
                 }`}
                 onClick={() => setSelectedFilter(option)}
               >
@@ -59,4 +59,4 @@ const Project = () => {
   )
 }
 
-export default Project;
+export default Project

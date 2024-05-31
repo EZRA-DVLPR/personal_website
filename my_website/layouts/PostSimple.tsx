@@ -40,17 +40,17 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                 <PageTitle>{title}</PageTitle>
               </div>
               {tags && (
-                  <div className="py-4 xl:py-8">
-                    <h2 className="text-xl uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Tags
-                    </h2>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
+                <div className="py-4 xl:py-8">
+                  <h2 className="text-xl uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                    Tags
+                  </h2>
+                  <div className="flex flex-wrap">
+                    {tags.map((tag) => (
+                      <Tag key={tag} text={tag} />
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
             </div>
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0">

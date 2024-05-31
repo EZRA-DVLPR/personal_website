@@ -72,7 +72,8 @@ const projectsData: Project[] = [
   },
   {
     title: 'Personal Website',
-    description: 'Finished designing this website with key integrations and interactivity. Uses Next.js with Typescript, TailwindCSS and many other libraries',
+    description:
+      'Finished designing this website with key integrations and interactivity. Uses Next.js with Typescript, TailwindCSS and many other libraries',
     status: 'Completed',
     href: '/blog/projects/first-post',
   },
@@ -118,7 +119,8 @@ const projectsData: Project[] = [
   },
   {
     title: 'Stack a Veggie',
-    description: 'Game similar to Suika Watermelon game but with vegetables. Hope to be rendered in the browser',
+    description:
+      'Game similar to Suika Watermelon game but with vegetables. Hope to be rendered in the browser',
     status: 'Planned',
   },
   {
@@ -183,7 +185,8 @@ const projectsData: Project[] = [
   },
   {
     title: 'Grade calculator',
-    description: 'program that calculates grades given the assignments and their weights accounting for curves',
+    description:
+      'program that calculates grades given the assignments and their weights accounting for curves',
     status: 'Planned',
   },
   {
@@ -193,7 +196,8 @@ const projectsData: Project[] = [
   },
   {
     title: 'Algorithm Visualizer + YT video',
-    description: 'Create a YT channel to explain concepts like algorithms and visualize them in code in several languages',
+    description:
+      'Create a YT channel to explain concepts like algorithms and visualize them in code in several languages',
     status: 'Planned',
   },
   {

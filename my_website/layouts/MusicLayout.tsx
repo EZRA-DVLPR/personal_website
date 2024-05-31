@@ -4,17 +4,17 @@ import React, { useRef } from 'react'
 import Sidebar from '@/components/Sidebar'
 import top100Data from '@/data/top100Data'
 
+// Define refs outside of the component
+const songRefs = top100Data.reduce((acc, song) => {
+  acc[song.rank] = useRef<HTMLDivElement>(null)
+  return acc
+}, {})
+
 const MusicLayout = ({ children }) => {
   // Precaution to sort the songs in case they aren't sorted
   const sortedSongs = top100Data.sort((a, b) => a.rank - b.rank)
 
   const songsWithRef = ['1', '5', '10', '25', '50', '100']
-
-  // Create refs for the songs specified in the array
-  const songRefs = songsWithRef.reduce((acc, songId) => {
-    acc[songId] = useRef<HTMLDivElement>(null)
-    return acc
-  }, {})
 
   // Function to scroll to the specific song
   const scrollToSong = (songId) => {
