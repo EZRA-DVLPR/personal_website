@@ -8,6 +8,8 @@ import { useState } from 'react'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
+const resumeFilePath = '/static/profprofile/ResumeSpring2024.pdf'
+
 const ResumeSection = () => {
   const [downloaded, setDownloaded] = useState(false)
 
@@ -20,12 +22,12 @@ const ResumeSection = () => {
       <h1 className="text-3xl font-bold">Resume</h1>
       <div className="mt-8 flex flex-col items-center">
         <div className="hidden rounded-md border-2 border-gray-300 sm:block">
-          <Document file={'/static/profprofile/ResumeFile.pdf'}>
+          <Document file={resumeFilePath}>
             <Page pageNumber={1} />
           </Document>
         </div>
         <a
-          href={'/static/profprofile/ResumeFile.pdf'}
+          href={resumeFilePath}
           download
           className="mt-4 rounded-md bg-comprimary-600 p-2 text-white hover:bg-comprimary-800 dark:bg-comprimary-700 dark:hover:bg-comprimary-400 "
           onClick={handleDownload}
