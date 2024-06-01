@@ -61,19 +61,20 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             </button>
           ))}
         </div>
-        <button
-          className="absolute left-0 top-1/2 -ml-20 -translate-y-1/2 transform rounded-md bg-comprimary-700 px-4 py-2 text-white hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500"
-          onClick={handlePrev}
-        >
-          Prev
-        </button>
-        <button
-          className="absolute right-0 top-1/2 -mr-20 -translate-y-1/2 transform rounded-md bg-comprimary-700 px-4 py-2 text-white hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500"
-          onClick={handleNext}
-        >
-          Next
-        </button>
-
+        <div className="flex justify-around">
+          <button
+            className="left-0 top-1/2 -translate-y-1/2 transform rounded-md bg-comprimary-700 px-4 py-2 text-white hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 sm:-ml-20 lg:absolute"
+            onClick={handlePrev}
+          >
+            Prev
+          </button>
+          <button
+            className="right-0 top-1/2 -translate-y-1/2 transform rounded-md bg-comprimary-700 px-4 py-2 text-white hover:bg-comprimary-900 dark:bg-comprimary-700 dark:hover:bg-comprimary-500 sm:-mr-20 lg:absolute"
+            onClick={handleNext}
+          >
+            Next
+          </button>
+        </div>
         {isExpanded && expandedImage && (
           <button
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
