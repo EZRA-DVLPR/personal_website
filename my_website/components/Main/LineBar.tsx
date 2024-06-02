@@ -49,7 +49,7 @@ const LineBar: React.FC<LineBarProps> = ({ values, rangeArray, onChange }) => {
           ariaLabel={['Lower thumb', 'Upper thumb']}
           ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
         />
-        <p>Selected range: {rangeArray.join(', ')}</p>
+        <p className="mt-2">Selected range: {rangeArray.join(', ')}</p>
       </div>
     </>
   )
