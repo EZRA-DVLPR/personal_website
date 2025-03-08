@@ -7,10 +7,10 @@ const StripeButton = () => {
 		const script = document.createElement("script");
 		script.src = "https://js.stripe.com/v3/buy-button.js";
 		script.async = true;
-		document.body.appendchild(script);
+		document.body.appendChild(script);
 
 		return () => {
-			document.body.removechild(script);
+			document.body.removeChild(script);
 		};
 	}, []);
 
