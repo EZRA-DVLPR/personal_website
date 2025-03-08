@@ -11,7 +11,7 @@ const Skills = () => {
   const lower = rangeValues[0]
   const upper = rangeValues[1]
   const range: number[] = []
-  for (let i = lower i <= upper i++) {
+  for (let i = lower; i <= upper; i++) {
    range.push(i)
   }
   return range

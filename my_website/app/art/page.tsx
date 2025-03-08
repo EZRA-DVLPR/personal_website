@@ -1,7 +1,7 @@
-import { genPageMetadata } from 'app/seo';
-import ArtGallery from '@/components/ArtGallery';
+import { genPageMetadata } from 'app/seo'
+import ArtGallery from '@/components/ArtGallery'
 
-export const metadata = genPageMetadata({ title: 'Art' });
+export const metadata = genPageMetadata({ title: 'Art' })
 
 const images = [
  // {
@@ -29,7 +29,7 @@ const images = [
   src: '/static/art/SeaHorse.png',
   title: 'SeaHorse Coloring',
   description:
-   'For this assignment in the art class I took, we were advised to use a color that we normally don't utilize in art. I don't typically color in browns and so I opted to use brown. This was a cool assignment because it put me out of my comfort zone.',
+   'For this assignment in the art class I took, we were advised to use a color that we normally don\'t utilize in art. I don\'t typically color in browns and so I opted to use brown. This was a cool assignment because it put me out of my comfort zone.',
   date: '2023-02-23',
  },
  {
