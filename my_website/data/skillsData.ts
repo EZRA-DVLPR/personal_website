@@ -222,7 +222,7 @@ const skillsData: SkillCategory[] = [
 			},
 			{
 				name: "SQLite",
-				proficency: 3,
+				proficiency: 3,
 				href: "https://www.sqlite.org/index.html",
 			},
 		],
