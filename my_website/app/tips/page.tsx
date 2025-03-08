@@ -2,6 +2,7 @@ import BuyMeACoffeeButton from "@/components/Main/BuyMeACoffeeButton";
 import KofiButton from "@/components/Main/KofiButton";
 import StripeButton from "@/components/Main/StripeButton";
 import LiberapayButton from "@/components/Main/LiberapayButton";
+import { genPageMetadata } from "app/seo";
 
 export const metadata = genPageMetadata({ title: "Tips" });
 
