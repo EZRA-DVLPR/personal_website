@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect } from 'react'
 
 // overlay with opts
@@ -53,7 +54,18 @@ const KofiButton = () => {
   }, [])
 
   // nothing rendered as html as its a pure script
-  return null
+  return (
+    <>
+      <a href="https://ko-fi.com/D1D41BNG8D" target="_blank">
+        <img
+          height="50"
+          width="300"
+          src="https://storage.ko-fi.com/cdn/kofi6.png?v=6"
+          alt="Buy Me a Coffee at ko-fi.com"
+        />
+      </a>
+    </>
+  )
 }
 
 export default KofiButton

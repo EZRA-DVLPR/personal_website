@@ -1,6 +1,5 @@
 import BuyMeACoffeeButton from '@/components/Main/BuyMeACoffeeButton'
 import KofiButton from '@/components/Main/KofiButton'
-import StripeButton from '@/components/Main/StripeButton'
 import LiberapayButton from '@/components/Main/LiberapayButton'
 import { genPageMetadata } from 'app/seo'
 
@@ -14,18 +13,16 @@ export default function Projects() {
           Tips/Donation Links!
         </h1>
         <div>
-          <ul>
+          <br></br>
+          <ul className="flex flex-col items-center justify-center space-y-10">
+            <li>
+              <LiberapayButton />
+            </li>
             <li>
               <BuyMeACoffeeButton />
             </li>
             <li>
               <KofiButton />
-            </li>
-            <li>
-              <StripeButton />
-            </li>
-            <li>
-              <LiberapayButton />
             </li>
           </ul>
         </div>
